@@ -1,0 +1,9 @@
+pandas==1.5.3
+osmnx==1.5.1
+taxicab==0.0.3
+geopandas==0.13.2
+matplotlib==3.7.2
+folium==0.16.0
+geopy==2.3.0
+tqdm==4.66.1
+numpy==1.23.5
