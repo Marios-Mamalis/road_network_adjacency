@@ -7,7 +7,7 @@ ox.all_oneway = True
 ox.log_console = True
 
 def visualize_points(new_node_df: pd.DataFrame, df_point_name_column: str, df_lat_column_name: str,
-                     df_long_column_name: str, sp_annot: [str, ...]) -> None:
+                     df_long_column_name: str, sp_annot: [str, ...] or None = None) -> None:
     """
     Given a DataFrame containing point names, their latitude and logitude, creates an interactive visualization of the
     points on a map on top of OpenStreetMap tiles.
@@ -19,6 +19,9 @@ def visualize_points(new_node_df: pd.DataFrame, df_point_name_column: str, df_la
     :param sp_annot: Names of points that should be annotated differently from the rest (red, instead of green).
     :return: None
     """
+
+    if not sp_annot:
+        sp_annot = []
 
     geo_df = gpd.GeoDataFrame(new_node_df, geometry=gpd.points_from_xy(new_node_df[df_long_column_name], new_node_df[df_lat_column_name]), crs="EPSG:4326")
     mapp = folium.Map(location=[geo_df[df_lat_column_name].mean(), geo_df[df_long_column_name].mean()], tiles="OpenStreetMap", zoom_start=10)
