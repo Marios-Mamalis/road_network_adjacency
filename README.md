@@ -23,6 +23,6 @@ Regarding georeferenced points, it is not uncommon for current methods to only t
   </tr>
 </table>
 
-To this end, the present method calculates the connectivity of the two points with the following formula:  
+To this end, the present method calculates the connectivity of any two points $a$ and $b$ with the following formula:  
 $connectivity_{a,b} = \frac{v(a,b)}{r(a,b)} \cdot e^{-\frac{r(a,b)}{k}}$  
-where $r(a,b)$ and $v(a,b)$ denote the shortest route through the road network and the shortest direct path (geodesic distance) respectively, while k serves as a parameter regulating the resulting matrix's connectivity. The higher the k, the higher the resulting network's connectivity.
+where $r(a,b)$ and $v(a,b)$ denote the shortest route through the road network and the shortest direct path (geodesic distance) between the two points, respectively, while k serves as a parameter regulating the resulting matrix's connectivity. The higher the k, the higher the resulting network's connectivity.
