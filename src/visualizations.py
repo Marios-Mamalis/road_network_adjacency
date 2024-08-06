@@ -13,9 +13,9 @@ def visualize_points(new_node_df: pd.DataFrame, df_point_name_column: str, df_la
     points on a map on top of OpenStreetMap tiles.
 
     :param new_node_df: The given DataFrame. Must contain the columns mentioned below:
-    :param df_point_name_column: (str) Contains point names.
-    :param df_lat_column_name: (float) Point latitude.
-    :param df_long_column_name: (float) Point logitude.
+    :param df_point_name_column: (column dtype: str) The name of the column that contains point names.
+    :param df_lat_column_name: (column dtype: float) The name of the column that contains point latitudes.
+    :param df_long_column_name: (column dtype: float) The name of the column that contains point logitudes.
     :param sp_annot: Names of points that should be annotated differently from the rest (red, instead of green).
     :return: None
     """
