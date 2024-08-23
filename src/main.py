@@ -9,7 +9,7 @@ import numpy as np
 
 def get_distances(node_df: pd.DataFrame, df_point_name_column: str, df_lat_column_name: str,
                   df_long_column_name: str, graph_path: str, overwrite: bool = False, offset: float = 0.05,
-                  km_eq_k: float = 5) -> pd.DataFrame:
+                  km_eq_k: float = 26.327) -> pd.DataFrame:
     """
     Given a DataFrame containing point names, their latitude and logitude, calculates the adjacency matrix for the road
     network.
