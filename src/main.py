@@ -11,7 +11,7 @@ def get_distances(node_df: pd.DataFrame, df_point_name_column: str, df_lat_colum
                   df_long_column_name: str, graph_path: str, overwrite: bool = False, offset: float = 0.05,
                   km_eq_k: float = 26.327) -> pd.DataFrame:
     """
-    Given a DataFrame containing point names, their latitude and logitude, calculates the adjacency matrix for the road
+    Given a DataFrame containing point names, their latitude and logitude, calculates the weighted adjacency matrix for the road
     network.
 
     :param node_df: The given DataFrame. Must contain the columns mentioned below:
